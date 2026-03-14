@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven mind AI - Sante mentale intelligente</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <nav class="bg-white shadow-sm py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-feather="activity" class="text-blue-500"></i>
+                <span class="text-xl font-bold">HAVEN MIND<span class="text-blue-500">AI</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-blue-500 font-medium">Accueil</a>
+                <a href="depistage.html" class="hover:text-blue-500 transition">Depistage</a>
+                <a href="orientation.html" class="hover:text-blue-500 transition">Orientation</a>
+                <a href="professionnels.html" class="hover:text-blue-500 transition">Professionnels</a>
+                <a href="contact.html" class="hover:text-blue-500 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="px-4 py-2 rounded-lg border border-blue-500 text-blue-500 hover:bg-blue-50 transition">Connexion</a>
+                <a href="register.html" class="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 text-white hover:opacity-90 transition">Inscription</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Prenez soin de votre <span class="gradient-text">sante mentale</span> avec l'IA</h1>
+                <p class="text-lg text-gray-600 mb-8">Version de demonstration en attente du backend et de la base de donnees. L'experience finale utilisera des comptes et des donnees reelles.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="depistage.html" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg font-medium hover:opacity-90 transition text-center">Essayer le depistage</a>
+                    <a href="orientation.html" class="px-6 py-3 border border-blue-500 text-blue-500 rounded-lg font-medium hover:bg-blue-50 transition text-center">Voir l'orientation</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="http://static.photos/medical/1024x576/1" alt="Illustration sante mentale" class="rounded-xl shadow-lg w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos solutions</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="search" class="text-blue-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Depistage</h3>
+                    <p class="text-gray-600">Questionnaire interactif cote frontend, pret a etre relie a vos APIs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="heart" class="text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Orientation</h3>
+                    <p class="text-gray-600">Interface de recommandation prete pour les donnees de professionnels.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-feather="trending-up" class="text-indigo-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Suivi</h3>
+                    <p class="text-gray-600">Espace professionnel configure en mode vide en attendant les vrais utilisateurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-6">Retours utilisateurs</h2>
+            <div class="max-w-3xl mx-auto bg-white rounded-xl p-8 shadow-sm border border-blue-100 text-center">
+                <i data-feather="message-circle" class="w-8 h-8 mx-auto text-blue-500 mb-3"></i>
+                <p class="text-gray-600">Aucun temoignage affiche pour le moment. Les retours reels seront publies apres mise en production.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-r from-blue-500 to-green-500 text-white">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold mb-6">Projet en pre-production</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Frontend reconstruit, en attente de connexion backend, base de donnees et comptes utilisateurs.</p>
+            <a href="depistage.html" class="inline-block px-8 py-3 bg-white text-blue-600 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">Voir le module depistage</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="activity" class="text-blue-400"></i>
+                        <span class="text-xl font-bold">Haven mind<span class="text-blue-400">AI</span></span>
+                    </div>
+                    <p class="text-gray-400">Frontend de demonstration en attente du backend.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="depistage.html" class="text-gray-400 hover:text-white transition">Depistage</a></li>
+                        <li><a href="orientation.html" class="text-gray-400 hover:text-white transition">Orientation</a></li>
+                        <li><a href="professionnels.html" class="text-gray-400 hover:text-white transition">Professionnels</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Confidentialite</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">CGU</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">RGPD</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400"><i data-feather="mail" class="w-4 h-4 mr-2"></i> contact@havenmind.ai</li>
+                        <li class="flex items-center text-gray-400"><i data-feather="phone" class="w-4 h-4 mr-2"></i> Numero en attente</li>
+                        <li class="flex items-center text-gray-400"><i data-feather="map-pin" class="w-4 h-4 mr-2"></i> Adresse en attente</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2026 Haven mind AI. Tous droits reserves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>feather.replace();</script>
+</body>
+</html>

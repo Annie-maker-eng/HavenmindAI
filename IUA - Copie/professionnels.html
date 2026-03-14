@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Professionnels | Haven mind AI</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <nav class="bg-white shadow-sm py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-feather="activity" class="text-blue-500"></i>
+                <span class="text-xl font-bold">Haven mind<span class="text-blue-500">AI</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-blue-500 transition">Accueil</a>
+                <a href="depistage.html" class="hover:text-blue-500 transition">Depistage</a>
+                <a href="orientation.html" class="hover:text-blue-500 transition">Orientation</a>
+                <a href="professionnels.html" class="text-blue-500 font-medium">Professionnels</a>
+                <a href="contact.html" class="hover:text-blue-500 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="px-4 py-2 rounded-lg border border-blue-500 text-blue-500 hover:bg-blue-50 transition">Connexion</a>
+                <a href="register.html" class="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 text-white hover:opacity-90 transition">Inscription</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">Espace professionnel</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Interface prete pour vos donnees patients une fois le backend et la base de donnees en place.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-xl shadow-sm"><p class="text-gray-500 text-sm">Patients suivis</p><h3 class="text-2xl font-bold">0</h3></div>
+            <div class="bg-white p-6 rounded-xl shadow-sm"><p class="text-gray-500 text-sm">RDV cette semaine</p><h3 class="text-2xl font-bold">0</h3></div>
+            <div class="bg-white p-6 rounded-xl shadow-sm"><p class="text-gray-500 text-sm">Alertes recentes</p><h3 class="text-2xl font-bold">0</h3></div>
+            <div class="bg-white p-6 rounded-xl shadow-sm"><p class="text-gray-500 text-sm">Tendance globale</p><h3 class="text-2xl font-bold">--</h3></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 space-y-6">
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-2xl font-semibold mb-4">Patients</h2>
+                    <div class="border border-dashed border-gray-300 rounded-lg p-10 text-center">
+                        <i data-feather="users" class="w-10 h-10 mx-auto text-blue-500 mb-3"></i>
+                        <p class="text-gray-600">Aucun patient charge. Les enregistrements apparaitront ici via API.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-2xl font-semibold mb-4">Alertes</h2>
+                    <div class="border border-dashed border-gray-300 rounded-lg p-8 text-center text-gray-600">Aucune alerte disponible pour le moment.</div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl shadow-sm p-6"><h2 class="text-xl font-semibold mb-4">Calendrier</h2><p class="text-gray-600">Les rendez-vous s'afficheront ici apres activation du module de planification.</p></div>
+                <div class="bg-white rounded-xl shadow-sm p-6"><h2 class="text-xl font-semibold mb-4">Ressources</h2><p class="text-gray-600">Contenus et documents seront alimentes depuis le backend.</p></div>
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="text-xl font-semibold mb-4">Actions rapides</h2>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button class="p-3 border border-gray-200 rounded-lg text-sm text-gray-500 cursor-not-allowed" disabled>Nouveau patient</button>
+                        <button class="p-3 border border-gray-200 rounded-lg text-sm text-gray-500 cursor-not-allowed" disabled>Nouveau RDV</button>
+                        <button class="p-3 border border-gray-200 rounded-lg text-sm text-gray-500 cursor-not-allowed" disabled>Message</button>
+                        <button class="p-3 border border-gray-200 rounded-lg text-sm text-gray-500 cursor-not-allowed" disabled>Rapport</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center text-gray-400"><p>© 2026 Haven mind AI. Tous droits reserves.</p></div>
+    </footer>
+
+    <script>feather.replace();</script>
+</body>
+</html>

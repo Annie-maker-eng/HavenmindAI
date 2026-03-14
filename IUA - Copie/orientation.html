@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientation | Haven mind AI</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-feather="activity" class="text-blue-500"></i>
+                <span class="text-xl font-bold">Haven mind <span class="text-blue-500">AI</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-blue-500 transition">Accueil</a>
+                <a href="depistage.html" class="hover:text-blue-500 transition">Depistage</a>
+                <a href="orientation.html" class="text-blue-500 font-medium">Orientation</a>
+                <a href="professionnels.html" class="hover:text-blue-500 transition">Professionnels</a>
+                <a href="contact.html" class="hover:text-blue-500 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="login.html" class="px-4 py-2 rounded-lg border border-blue-500 text-blue-500 hover:bg-blue-50 transition">Connexion</a>
+                <a href="register.html" class="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 text-white hover:opacity-90 transition">Inscription</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="py-12 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">Trouvez le professionnel adapte a vos besoins</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Cette page est prete pour le backend. Les recommandations, profils et disponibilites seront charges depuis la base de donnees.</p>
+            </div>
+
+            <!-- Recommendation Card -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-12 max-w-2xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-4">Votre recommandation</h2>
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                        <i data-feather="info" class="text-blue-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium">Aucune recommandation disponible</h3>
+                        <p class="text-gray-600">Une recommandation personnalisee apparaitra ici apres traitement de vos donnees par le backend.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-12">
+                <h2 class="text-2xl font-semibold mb-4">Affiner votre recherche</h2>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Type de professionnel</label>
+                        <select class="w-full p-2 border border-gray-300 rounded-lg">
+                            <option>Tous</option>
+                            <option>Psychologue</option>
+                            <option>Psychiatre</option>
+                            <option>Coach</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Mode de consultation</label>
+                        <select class="w-full p-2 border border-gray-300 rounded-lg">
+                            <option>Tous</option>
+                            <option>Presentiel</option>
+                            <option>Teleconsultation</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Disponibilite</label>
+                        <select class="w-full p-2 border border-gray-300 rounded-lg">
+                            <option>Tous</option>
+                            <option>Matin</option>
+                            <option>Apres-midi</option>
+                            <option>Soir</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Localisation</label>
+                        <select class="w-full p-2 border border-gray-300 rounded-lg">
+                            <option>Toutes</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="search-btn" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">Rechercher</button>
+                <p id="search-message" class="hidden text-sm text-blue-700 mt-3">Recherche en attente: connectez cette action a votre API backend.</p>
+            </div>
+
+            <!-- Professionals List -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-semibold mb-6">Professionnels recommandes</h2>
+                <div class="bg-white rounded-xl shadow-md p-10 text-center border border-gray-100">
+                    <i data-feather="users" class="w-10 h-10 mx-auto text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Aucun profil disponible pour le moment</h3>
+                    <p class="text-gray-600">Les profils seront affiches ici des que le backend et la base de donnees seront connectes.</p>
+                </div>
+            </div>
+
+            <!-- Teleconsultation Info -->
+            <div class="bg-blue-50 rounded-xl p-6 mb-12">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                        <i data-feather="video" class="text-blue-500"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold mb-2">Teleconsultation</h2>
+                        <p class="text-gray-600 mb-4">Le module de reservation sera active lorsque le backend de rendez-vous sera disponible.</p>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="flex items-start">
+                                <i data-feather="clock" class="text-blue-500 mr-2 mt-1"></i>
+                                <div>
+                                    <h3 class="font-medium">Gain de temps</h3>
+                                    <p class="text-sm text-gray-600">Sans deplacement</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="home" class="text-blue-500 mr-2 mt-1"></i>
+                                <div>
+                                    <h3 class="font-medium">Confort</h3>
+                                    <p class="text-sm text-gray-600">Depuis chez vous</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="shield" class="text-blue-500 mr-2 mt-1"></i>
+                                <div>
+                                    <h3 class="font-medium">Securite</h3>
+                                    <p class="text-sm text-gray-600">Confidentialite renforcee</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Re-evaluation CTA -->
+            <div class="text-center mb-12">
+                <p class="text-gray-600 mb-4">Vous souhaitez reevaluer vos besoins ?</p>
+                <a href="depistage.html" class="inline-block px-6 py-2 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-50 transition">Refaire le depistage</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="activity" class="text-blue-400"></i>
+                        <span class="text-xl font-bold">Haven mind<span class="text-blue-400">AI</span></span>
+                    </div>
+                    <p class="text-gray-400">L'IA au service de votre bien-etre mental.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="depistage.html" class="text-gray-400 hover:text-white transition">Depistage</a></li>
+                        <li><a href="orientation.html" class="text-gray-400 hover:text-white transition">Orientation</a></li>
+                        <li><a href="professionnels.html" class="text-gray-400 hover:text-white transition">Professionnels</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Confidentialite</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">CGU</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">RGPD</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400"><i data-feather="mail" class="w-4 h-4 mr-2"></i> contact@mindcare.ai</li>
+                        <li class="flex items-center text-gray-400"><i data-feather="phone" class="w-4 h-4 mr-2"></i> +225 05 05 58 68 77</li>
+                        <li class="flex items-center text-gray-400"><i data-feather="map-pin" class="w-4 h-4 mr-2"></i> Abidjan, Cote d'Ivoire</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2026 Haven mind AI. Tous droits reserves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        document.getElementById('search-btn').addEventListener('click', function() {
+            document.getElementById('search-message').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
